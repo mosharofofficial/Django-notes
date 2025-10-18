@@ -38,5 +38,7 @@ code .
 
  ![Add app_name to INSTALLED_APP list](/images/addInstalledApp.jpg)
 
+ 2. 
+
 
 
