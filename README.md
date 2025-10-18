@@ -68,7 +68,53 @@ python manage.py createsuperuser
 
 ![Creating Super User](/images/addSuperUser.jpg)
 
+### Running dev server:
+The following command runs the project in the development server. We can specify a port number. 
+The default port number is `8000`
+```cmd
+python manage.py runserver 8080
+```
+### Creating Models:
 
+Models are python sub classes of `models.Model`.
+
+```python
+from django.db import models
+
+class Note(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_pinned = models.BooleanField(default=False)
+    attachment = models.FileField(upload_to='attachments/', null=True, blank=True)
+    priority = models.PositiveSmallIntegerField(default=1)
+
+    def __str__(self):
+        return self.title
+```
+
+### Templates:
+
+####```base.html```
+```HTML
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Management</title>
+    {% block head %} {% endblock head %}
+  </head>
+  <body>
+    <ul>
+      <li><a href="{% url 'doctorPage' %}">Home</a></li>
+    </ul>
+    {% block body %} {% endblock body %}
+  </body>
+</html>
+```
 
 
 
