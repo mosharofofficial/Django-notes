@@ -46,6 +46,29 @@ code .
 
  ![Add STATIC and MEDIA folder paths](/images/static&media.jpg)
 
- 
+ ## Database Migration and Superuser
+---
+
+###Running migrations:
+
+`makemigrations` makes migrations files which contains changes to schema.
+`migrate` applies changes from migrations files to database.
+
+ ```cmd
+python manage.py makemigrations  
+
+python manage.py migrate
+```
+
+### Creating Super User:
+
+```cmd
+python manage.py createsuperuser 
+```
+
+![Creating Super User](/images/addSuperUser.jpg)
+
+
+
 
 
