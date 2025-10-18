@@ -35,7 +35,7 @@ code .
 `code .` will open the project in vscode. Then we have to configure the settings.py file in the project folder.
 
 1. Add `app_name` to `INSTALLED_APP` list:
- ![]()
+ ![Add app_name to INSTALLED_APP list](/images/addInstalledApp.jpg)
 
 
 
