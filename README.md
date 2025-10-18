@@ -38,7 +38,11 @@ code .
 
  ![Add app_name to INSTALLED_APP list](/images/addInstalledApp.jpg)
 
- 2. 
+ 2. Add `templates` folder name to the `TEMPLATES` list:
+
+ ![Add app_name to INSTALLED_APP list](/images/addInstalledApp.jpg)
+
+ 3. 
 
 
 
