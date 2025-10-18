@@ -94,6 +94,17 @@ class Note(models.Model):
         return self.title
 ```
 
+### Admin
+
+We have to register the models in `admin.py` file. Here is and example admin page:
+
+```python
+from django.contrib import admin
+from myapp.models import *
+
+admin.site.register([CustomUser, Note])
+```
+
 ### Templates:
 
 `base.html` is the layout file which defines the general layout of the website.
@@ -198,4 +209,21 @@ from .models import Note
 def home(request):
     notes = Note.objects.all()
     return render(request, 'home.html', {'notes': notes})
+```
+
+### Adding URLs
+
+URLs are how we access a webpage.
+In django we have to configure the `urls.py` file. Here is an example `urls.py` file.
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('app_name.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ```
