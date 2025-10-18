@@ -40,7 +40,7 @@ code .
 
  2. Add `templates` folder name to the `TEMPLATES` list:
 
- ![Add app_name to INSTALLED_APP list](/images/addInstalledApp.jpg)
+ ![Add app_name to INSTALLED_APP list](/images/addTemplates.jpg)
 
  3. 
 
