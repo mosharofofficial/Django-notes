@@ -40,9 +40,12 @@ code .
 
  2. Add `templates` folder name to the `TEMPLATES` list:
 
- ![Add app_name to INSTALLED_APP list](/images/addTemplates.jpg)
+ ![Add template to TEMPLATES list](/images/addTemplates.jpg)
 
- 3. 
+ 3. Configure static and media files by adding these lines at the bottom of `settings.py`:
 
+ ![Add STATIC and MEDIA folder paths](/images/static&media.jpg)
+
+ 
 
 
