@@ -96,9 +96,11 @@ class Note(models.Model):
 
 ### Templates:
 
-####```base.html```
-```HTML
+####Base.html
+`base.html` is the layout file which defines the general layout of the website.
+Usually this is where navbar, footer and other parts of the website which are common for all the pages are defined.
 
+```HTML
 <!DOCTYPE html>
 <html lang="en">
   <head>
