@@ -7,6 +7,10 @@ The following code creates a python virtual environment:
 ```cmd
 python -m venv env
 ```
+We have to activate the environment by running the following command:
+```cmd
+.\env\Scripts\activate
+```
 Now we have to install the required packages with pythons package manager called ***pip***.
 ```cmd
 pip install django
@@ -16,5 +20,22 @@ To see what packages we have installed we can use the following command:
 ```cmd
 pip freeze
 ```
+After installing all the necessary packages, we have to start a project by writing the following command:
+```cmd
+django-admin startproject project_name
+```
+After running the commands above, we can se a project folder with the given project name. We can open that folder in the code editor and start coding.
+We can also setup the project further by running the following commands:
+```cmd
+cd project_name
+python manage.py startapp app_name
+mkdir templates
+code .
+```
+`code .` will open the project in vscode. Then we have to configure the settings.py file in the project folder.
+
+1. Add `app_name` to `INSTALLED_APP` list:
+ ![]()
+
 
 
