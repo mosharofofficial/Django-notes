@@ -96,7 +96,8 @@ class Note(models.Model):
 
 ### Templates:
 
-####Base.html
+####Layout:
+
 `base.html` is the layout file which defines the general layout of the website.
 Usually this is where navbar, footer and other parts of the website which are common for all the pages are defined.
 
@@ -106,7 +107,7 @@ Usually this is where navbar, footer and other parts of the website which are co
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hospital Management</title>
+    <title>Website Title</title>
     {% block head %} {% endblock head %}
   </head>
   <body>
