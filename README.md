@@ -117,5 +117,71 @@ Usually this is where navbar, footer and other parts of the website which are co
 </html>
 ```
 
+Other files usually override the `block` tags specified in `base.html`.
 
+ ```HTML
+{% extends 'base.html' %} 
+{% block head %}
+    <styles></styles>
+    <scripts></scripts>
+{% endblock head %} 
+{% block body %}
+<form method="POST">
+  {% csrf_token %}
+  <label for="fname">Name</label>
+  <input type="text" id="fname" name="name" />
 
+  <label for="lname">Specialization</label>
+  <select id="country" name="specialization">
+    <option value="australia">Australia</option>
+  </select>
+
+  <label for="lname">Phone</label>
+  <input type="text" id="lname" name="phone" />
+
+  <label for="lname">Email</label>
+  <input type="text" id="lname" name="email" />
+
+  <label for="country">Department</label>
+  <select id="country" name="department">
+    <option value="" selected disabled>Select Department</option>
+
+    {% for d in depts %}
+    <option value="{{d.id}}">{{d.name}}</option>
+    {% endfor %}
+  </select>
+
+  <input type="submit" value="Submit" />
+</form>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Specialization</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Department</th>
+    <th>Actions</th>
+  </tr>
+
+  {% for i in doctors %}
+  <tr>
+    <td>{{i.name}}</td>
+    <td>{{i.specialization}}</td>
+    <td>{{i.phone}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.department}}</td>
+    <td>
+      <a href="#">Edit</a>
+      <a href="#">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock body %}
+```
+Note: To use the `base.html` file as layout, other HTML files must have this line as the first line:
+```html
+{% extends 'base.html' %}
+```
