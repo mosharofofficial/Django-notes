@@ -1,6 +1,6 @@
 # Django-notes
 
-## Project Setup:
+### Project Setup:
 ---
 First we need to setup a django project in a virtual environment so that other packages don't conflict with the packeges used in the project.
 The following code creates a python virtual environment:
@@ -184,4 +184,18 @@ Other files usually override the `block` tags specified in `base.html`.
 Note: To use the `base.html` file as layout, other HTML files must have this line as the first line:
 ```html
 {% extends 'base.html' %}
+```
+
+### Views
+
+Views are python functions which handle the logical side of the website and makes the page more dynamic.
+
+Here is an example view function:
+```python
+from django.shortcuts import render, redirect
+from .models import Note
+
+def home(request):
+    notes = Note.objects.all()
+    return render(request, 'home.html', {'notes': notes})
 ```
