@@ -49,7 +49,7 @@ code .
  ## Database Migration and Superuser
 ---
 
-###Running migrations:
+### Running migrations:
 
 `makemigrations` makes migrations files which contains changes to schema.
 `migrate` applies changes from migrations files to database.
@@ -74,4 +74,5 @@ The default port number is `8000`
 ```cmd
 python manage.py runserver 8080
 ```
+
 
